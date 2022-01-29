@@ -1,0 +1,98 @@
+.app {
+  min-height: 400px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: x-large;
+  margin-bottom: 1px;
+}
+
+.header-desc {
+  font-size: small;
+}
+
+.form-content {
+  width: 320px;
+}
+
+.form-label {
+  margin-bottom: 2px;
+  font-size: small;
+  font-weight: 500;
+}
+
+.btn {
+  width: 100%;
+  background-color: #673ab7;
+  font-size: small;
+}
+
+.btn-primary:hover {
+  background-color: #673ab7;
+}
+
+.optioanl-tag {
+  font-size: small;
+  color: darkgrey;
+  font-weight: 100;
+}
+
+.card-input-element {
+  display: none;
+}
+
+.card-input:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+  box-shadow: 0 0 1px 1px #673ab7;
+}
+
+.flex-card {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.card-input {
+  width: 145px;
+  padding: 15px;
+  border: solid 1px;
+  border-style: groove;
+  border-radius: 5px;
+}
+
+.radio-desc {
+  font-size: small;
+}
+
+.radio-header {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.bi-check-circle-fill {
+  font-size: 40px;
+}

@@ -1,0 +1,41 @@
+.p-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.p {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+
+.p li {
+  list-style-type: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  z-index: 20;
+}
+
+.p li.active {
+  background-color: blueviolet;
+}
+
+hr {
+  background-color: brown;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  margin: 0px;
+  opacity: 1;
+  z-index: 10;
+}
