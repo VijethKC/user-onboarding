@@ -1,25 +1,31 @@
 import React from "react";
+import InputForm from "../form-components/InputForm";
+import DisplayText from "../form-components/DisplayText";
+import Button from "../form-components/Button";
 
 const FormWorkspaceDetails = ({ nextStep, handleChange, formData }) => {
   const { workspaceName, workspaceUrl } = formData;
   return (
     <div className="container">
       <div className="header-section">
-        <p className="header">Let's set up a home for all your work</p>
-        <span className="header-desc">You can always change them later.</span>
+        <DisplayText
+          className="header-title"
+          text="Let's set up a home for all your work"
+        />
+        <DisplayText
+          className="header-description"
+          text="You can always change them later."
+        />
       </div>
       <div className="form-content">
-        <div className="mb-3">
-          <label className="form-label">Workspace Name</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Eden"
-            name="workspaceName"
-            value={workspaceName}
-            onChange={handleChange}
-          />
-        </div>
+        <InputForm
+          type="text"
+          placeholder="Eden"
+          name="workspaceName"
+          value={workspaceName}
+          onChange={handleChange}
+          label="Workspace Name"
+        />
         <label className="form-label">
           Workspace URL <span className="optioanl-tag">(optional)</span>
         </label>
@@ -34,15 +40,7 @@ const FormWorkspaceDetails = ({ nextStep, handleChange, formData }) => {
             onChange={handleChange}
           />
         </div>
-        <div className="col-auto">
-          <button
-            type="submit"
-            className="btn btn-primary mb-3"
-            onClick={nextStep}
-          >
-            Create Workspace
-          </button>
-        </div>
+        <Button type="submit" handleSubmit={nextStep} text="Create Workspace" />
       </div>
     </div>
   );

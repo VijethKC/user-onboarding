@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import FormRoleDetails from "./FormRoleDetails";
-import FormUserDetails from "./FormUserDetails";
-import FormWorkspaceDetails from "./FormWorkspaceDetails";
-import Success from "./Success";
+import FormRoleDetails from "./pages/FormRoleDetails";
+import FormUserDetails from "./pages/FormUserDetails";
+import FormWorkspaceDetails from "./pages/FormWorkspaceDetails";
+import Success from "./pages/Success";
 
 import "./css/app.css";
+import "./css/onBoardingForm.css";
 
 const OnboardingForm = ({ nextStep, step }) => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,10 @@ const OnboardingForm = ({ nextStep, step }) => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = () => {
+    alert(JSON.stringify(formData));
   };
 
   switch (step) {
@@ -44,7 +49,7 @@ const OnboardingForm = ({ nextStep, step }) => {
         />
       );
     case 4:
-      return <Success />;
+      return <Success handleSubmit={handleSubmit} />;
     default:
       console.log("Onboaring Form");
   }

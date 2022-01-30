@@ -13,12 +13,13 @@ const ProgressBar = ({ step }) => {
   useEffect(() => {
     arr.slice(0, step).map((element) => {
       element.current.style.backgroundColor = "#673ab7";
+      element.current.style.color = "white";
     });
   }, [step]);
 
   return (
     <div className="p-container">
-      <ul className="p">
+      <ul className="p-list">
         <hr />
         <li ref={listOne}>1</li>
         <li ref={listTwo}>2</li>

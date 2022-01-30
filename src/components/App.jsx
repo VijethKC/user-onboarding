@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import OnboardingForm from "./OnboardingForm";
 import ProgressBar from "./ProgressBar";
+import logo from "./images/logo.PNG";
 
 import "./css/app.css";
 
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <img src={logo} alt="Logo" className="logo" />
       <ProgressBar step={step} />
       <OnboardingForm nextStep={nextStep} step={step} />
     </div>
